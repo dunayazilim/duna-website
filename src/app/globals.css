@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('/SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #fdfdfb;
+  color: #242225;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.lang-switcher {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #242225;
+  letter-spacing: 0.02em;
+}
+
+.lang-switcher button {
+  background: none;
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  color: #242225;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.lang-switcher .lang-active {
+  text-decoration: underline;
+}
+
+.contact-button {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  color: #242225;
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 480px;
+  width: 60%;
+}
+
+footer {
+  position: fixed;
+  bottom: 24px;
+  font-size: 13px;
+  color: #242225;
+  letter-spacing: 0.02em;
+}
