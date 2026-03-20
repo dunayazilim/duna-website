@@ -81,3 +81,45 @@ footer {
   color: #242225;
   letter-spacing: 0.02em;
 }
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-size: 13px;
+  color: #242225;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  background: #ffffff;
+  border: 1.5px solid #242225;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: slideUp 0.25s ease-out;
+  z-index: 10;
+}
+
+.cookie-banner button {
+  background: none;
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  color: #242225;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
