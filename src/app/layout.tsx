@@ -2,7 +2,83 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Duna Yazılım",
+  metadataBase: new URL("https://dunayazilim.com.tr"),
+  title: {
+    default: "Duna Yazılım Danışmanlık | Yazılım Çözümleri",
+    template: "%s | Duna Yazılım Danışmanlık",
+  },
+  description:
+    "Duna Yazılım Danışmanlık Limited Şirketi — profesyonel yazılım danışmanlığı, özel yazılım geliştirme ve teknoloji çözümleri. Duna Software, Turkey.",
+  keywords: [
+    "duna yazılım",
+    "duna yazılım danışmanlık",
+    "duna yazılım danışmanlığı",
+    "duna yazılım danışmanlık limited şirketi",
+    "duna software",
+    "yazılım danışmanlığı",
+    "yazılım",
+    "duna",
+    "yazılım şirketi",
+    "özel yazılım geliştirme",
+    "software consultancy",
+    "software development Turkey",
+    "Duna Yazilim",
+    "duna yazilim danismanlik",
+  ],
+  authors: [{ name: "Duna Yazılım Danışmanlık" }],
+  creator: "Duna Yazılım Danışmanlık",
+  publisher: "Duna Yazılım Danışmanlık",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "https://dunayazilim.com.tr",
+    languages: {
+      "tr-TR": "https://dunayazilim.com.tr",
+      "en-US": "https://dunayazilim.com.tr",
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    alternateLocale: "en_US",
+    url: "https://dunayazilim.com.tr",
+    siteName: "Duna Yazılım Danışmanlık",
+    title: "Duna Yazılım Danışmanlık | Yazılım Çözümleri",
+    description:
+      "Profesyonel yazılım danışmanlığı ve özel yazılım geliştirme. Duna Yazılım Danışmanlık Limited Şirketi.",
+    images: [
+      {
+        url: "/Logo.png",
+        width: 480,
+        alt: "Duna Yazılım Danışmanlık Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Duna Yazılım Danışmanlık",
+    description: "Profesyonel yazılım danışmanlığı ve özel yazılım geliştirme.",
+    images: ["/Logo.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Duna Yazılım Danışmanlık Limited Şirketi",
+  alternateName: ["Duna Yazılım", "Duna Software", "Duna Yazılım Danışmanlık"],
+  url: "https://dunayazilim.com.tr",
+  logo: "https://dunayazilim.com.tr/Logo.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "emirsurmen@gmail.com",
+    contactType: "customer service",
+    availableLanguage: ["Turkish", "English"],
+  },
+  sameAs: [],
 };
 
 export default function RootLayout({
@@ -12,7 +88,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </body>
     </html>
   );
 }

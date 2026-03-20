@@ -30,7 +30,7 @@ export default function Home() {
         </button>
       </div>
       <a href="mailto:emirsurmen@gmail.com" className="contact-button">{t.contact}</a>
-      <img src="/Logo.png" alt="Duna Yazılım" />
+      <img src="/Logo.png" alt="Duna Yazılım Danışmanlık Logo" />
       <footer>{t.footer}</footer>
     </>
   );
