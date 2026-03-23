@@ -20,14 +20,16 @@ const app = initializeApp(firebaseConfig);
 const texts = {
   tr: {
     contact: "İletişim",
-    footer: "© 2026, Duna Yazılım",
+    footer: "© 2026, Duna Yazılım & Danışmanlık",
+    trustedBy: "Partnerlerimiz",
     cookieNotice: "Bu site analitik için çerez kullanmaktadır.",
     cookieAccept: "Kabul Et",
     cookieReject: "Reddet",
   },
   en: {
     contact: "Contact",
-    footer: "© 2026, Duna Yazılım",
+    footer: "© 2026, Duna Yazılım & Danışmanlık",
+    trustedBy: "Trusted By",
     cookieNotice: "This site uses cookies for analytics.",
     cookieAccept: "Accept",
     cookieReject: "Reject",
@@ -79,7 +81,17 @@ export default function Home() {
         </button>
       </div>
       <a href="mailto:emirsurmen@gmail.com" className="contact-button">{t.contact}</a>
-      <img src="/Logo.png" alt="Duna Yazılım Danışmanlık Logo" />
+      <div className="main-content">
+        <img src="/Logo.png" alt="Duna Yazılım Danışmanlık Logo" className="main-logo" />
+        <section className="trusted-by">
+          <p className="trusted-by-label">{t.trustedBy}</p>
+          <div className="partner-logos">
+            <a href="https://growmesh.io" target="_blank" rel="noopener noreferrer">
+              <img src="/mesh_logo.png" alt="Mesh" className="partner-logo" />
+            </a>
+          </div>
+        </section>
+      </div>
       {consentLoaded && cookieConsent === null && (
         <div className="cookie-banner">
           <span>{t.cookieNotice}</span>
