@@ -23,7 +23,9 @@ const texts = {
   tr: {
     contact: "İletişim",
     footer: "© 2026, Duna Yazılım & Danışmanlık",
+    about: "Yazılımı insan dokunuşuyla geliştiriyoruz; önce dinliyor, sonra ihtiyaçlarınıza gerçekten uyan çözümler üretiyoruz. Şablon yok, kestirme yol yok, sadece hedeflerinize göre şekillenen özenli çalışma.",
     trustedBy: "Partnerlerimiz",
+    andMore: "ve daha fazlası...",
     cookieNotice: "Bu site analitik için çerez kullanmaktadır.",
     cookieAccept: "Kabul Et",
     cookieReject: "Reddet",
@@ -33,7 +35,9 @@ const texts = {
   en: {
     contact: "Contact",
     footer: "© 2026, Duna Yazılım & Danışmanlık",
+    about: "We build software with a human touch; listening first, then crafting solutions that truly fit your needs. No templates, no shortcuts, just thoughtful work shaped around your goals.",
     trustedBy: "Trusted By",
+    andMore: "and many more...",
     cookieNotice: "This site uses cookies for analytics.",
     cookieAccept: "Accept",
     cookieReject: "Reject",
@@ -92,6 +96,7 @@ export default function Home() {
       <button className="contact-button" onClick={() => { setContactOpen(true); setShowCalendar(false); }}>{t.contact}</button>
       <div className="main-content">
         <img src="/Logo.png" alt="Duna Yazılım Danışmanlık Logo" className="main-logo" />
+        <p className="about-text">{t.about}</p>
         <section className="trusted-by">
           <p className="trusted-by-label">{t.trustedBy}</p>
           <div className="partner-logos">
@@ -99,6 +104,7 @@ export default function Home() {
               <img src="/mesh_logo.png" alt="Mesh" className="partner-logo" />
             </a>
           </div>
+          <p className="and-more">{t.andMore}</p>
         </section>
       </div>
       {consentLoaded && cookieConsent === null && (
