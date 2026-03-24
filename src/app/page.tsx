@@ -2,7 +2,7 @@
 "use client";
 
 import { getAnalytics, isSupported } from "firebase/analytics";
-import { initializeApp } from "firebase/app";
+import { getApps, initializeApp } from "firebase/app";
 import { useEffect, useState } from "react";
 
 const firebaseConfig = {
@@ -15,7 +15,9 @@ const firebaseConfig = {
   measurementId: "G-BDY66DFHQ1",
 };
 
-const app = initializeApp(firebaseConfig);
+function getFirebaseApp() {
+  return getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+}
 
 const texts = {
   tr: {
@@ -25,6 +27,8 @@ const texts = {
     cookieNotice: "Bu site analitik için çerez kullanmaktadır.",
     cookieAccept: "Kabul Et",
     cookieReject: "Reddet",
+    contactEmail: "E-posta gönder",
+    contactMeeting: "Toplantı planla",
   },
   en: {
     contact: "Contact",
@@ -33,6 +37,8 @@ const texts = {
     cookieNotice: "This site uses cookies for analytics.",
     cookieAccept: "Accept",
     cookieReject: "Reject",
+    contactEmail: "Send an email",
+    contactMeeting: "Schedule a meeting",
   },
 };
 
@@ -40,6 +46,8 @@ export default function Home() {
   const [lang, setLang] = useState<"tr" | "en">("en");
   const [cookieConsent, setCookieConsent] = useState<"accepted" | "rejected" | null>(null);
   const [consentLoaded, setConsentLoaded] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
   const t = texts[lang];
 
   useEffect(() => {
@@ -52,6 +60,7 @@ export default function Home() {
 
   useEffect(() => {
     if (cookieConsent === "accepted") {
+      const app = getFirebaseApp();
       isSupported().then((yes) => {
         if (yes) getAnalytics(app);
       });
@@ -80,7 +89,7 @@ export default function Home() {
           TR
         </button>
       </div>
-      <a href="mailto:emirsurmen@gmail.com" className="contact-button">{t.contact}</a>
+      <button className="contact-button" onClick={() => { setContactOpen(true); setShowCalendar(false); }}>{t.contact}</button>
       <div className="main-content">
         <img src="/Logo.png" alt="Duna Yazılım Danışmanlık Logo" className="main-logo" />
         <section className="trusted-by">
@@ -101,6 +110,37 @@ export default function Home() {
         </div>
       )}
       <footer>{t.footer}</footer>
+      {contactOpen && (
+        <div className="contact-overlay" onClick={() => setContactOpen(false)}>
+          <div
+            className={`contact-popup${showCalendar ? " contact-popup--calendar" : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {!showCalendar ? (
+              <div className="contact-options">
+                <a href="mailto:emir@dunayazilim.com.tr" className="contact-option">
+                  {t.contactEmail}
+                </a>
+                <span>/</span>
+                <button className="contact-option" onClick={() => setShowCalendar(true)}>
+                  {t.contactMeeting}
+                </button>
+              </div>
+            ) : (
+              <>
+                <button className="contact-back" onClick={() => setShowCalendar(false)}>
+                  &larr; {t.contact}
+                </button>
+                <iframe
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3RQUrTEXdZy6rbzoR9KlpC6HBNIanWL9hMD4vdY7wvuAb2wJ5jQdq5X07hnCaoIB-ILBaa8ZGF?gv=true"
+                  className="contact-calendar"
+                  title="Schedule a meeting"
+                />
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }

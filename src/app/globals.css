@@ -148,12 +148,14 @@ footer {
   font-size: 13px;
   color: #242225;
   letter-spacing: 0.02em;
-  white-space: nowrap;
   background: #ffffff;
   border: 1.5px solid #242225;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   animation: slideUp 0.25s ease-out;
   z-index: 10;
+  max-width: calc(100vw - 32px);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cookie-banner button {
@@ -165,4 +167,103 @@ footer {
   cursor: pointer;
   padding: 0;
   text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.contact-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 1.5px solid #242225;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 14px 20px;
+  z-index: 101;
+  animation: popIn 0.25s ease-out;
+}
+
+.contact-popup--calendar {
+  padding: 0;
+  width: min(90vw, 600px);
+  height: min(80vh, 680px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .contact-popup {
+    width: calc(100vw - 32px);
+  }
+
+  .contact-options {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.contact-back {
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid #242225;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  color: #242225;
+  cursor: pointer;
+  padding: 12px 20px;
+  text-align: left;
+  letter-spacing: 0.02em;
+  text-decoration: underline;
+  flex-shrink: 0;
+}
+
+.contact-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #242225;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.contact-option {
+  background: none;
+  border: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 13px;
+  color: #242225;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.contact-calendar {
+  width: 100%;
+  flex: 1;
+  border: 0;
 }
