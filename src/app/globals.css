@@ -15,12 +15,15 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
   background-color: #fdfdfb;
   color: #242225;
   font-family: 'Source Code Pro', monospace;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 .lang-switcher {
@@ -311,4 +314,12 @@ footer {
   width: 100%;
   flex: 1;
   border: 0;
+}
+
+.not-found-text {
+  font-size: 13px;
+  color: #242225;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+  text-decoration: underline;
 }

@@ -55,6 +55,11 @@ export default function Home() {
   const t = texts[lang];
 
   useEffect(() => {
+    document.body.classList.add("no-scroll");
+    return () => document.body.classList.remove("no-scroll");
+  }, []);
+
+  useEffect(() => {
     const stored = localStorage.getItem("cookie-consent");
     if (stored === "accepted" || stored === "rejected") {
       setCookieConsent(stored);
