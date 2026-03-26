@@ -108,6 +108,12 @@ export default function Home() {
             <a href="https://growmesh.io" target="_blank" rel="noopener noreferrer">
               <img src="/mesh_logo.png" alt="Mesh" className="partner-logo" />
             </a>
+            <a href="https://studenttutoring.hu" target="_blank" rel="noopener noreferrer">
+              <img src="/student-logo.png" alt="Student Tutoring" className="partner-logo" />
+            </a>
+            <a href="https://autoflow.video" target="_blank" rel="noopener noreferrer">
+              <img src="/autoflow_logo.png" alt="AutoFlow" className="partner-logo" />
+            </a>
           </div>
           <p className="and-more">{t.andMore}</p>
         </section>
