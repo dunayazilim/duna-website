@@ -54,11 +54,19 @@ body.no-scroll {
   text-decoration: underline;
 }
 
-.contact-button {
+.top-actions {
   position: fixed;
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 5;
+}
+
+.contact-button {
   background: none;
   border: none;
   font-family: 'Source Code Pro', monospace;
@@ -266,6 +274,12 @@ footer {
 
   .contact-popup {
     width: calc(100vw - 32px);
+  }
+
+  .top-actions {
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: calc(100vw - 32px);
   }
 
   .contact-options {

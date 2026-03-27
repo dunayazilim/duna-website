@@ -98,7 +98,12 @@ export default function Home() {
           TR
         </button>
       </div>
-      <button className="contact-button" onClick={() => { setContactOpen(true); setShowCalendar(false); }}>{t.contact}</button>
+      <div className="top-actions">
+        <button className="contact-button" onClick={() => { setContactOpen(true); setShowCalendar(false); }}>{t.contact}</button>
+        <button className="contact-button" onClick={() => window.open("https://play.google.com/store/apps/dev?id=5556725446422818374", "_blank")}>
+          Google Play
+        </button>
+      </div>
       <div className="main-content">
         <img src="/Logo.png" alt="Duna Yazılım Danışmanlık Logo" className="main-logo" />
         <p className="about-text">{t.about}</p>
