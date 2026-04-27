@@ -4,8 +4,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://dunayazilim.com.tr"),
   title: {
-    default: "Duna Yazılım & Danışmanlık",
-    template: "%s | Duna Yazılım & Danışmanlık",
+    default: "Duna Yazılım",
+    template: "%s | Duna Yazılım",
   },
   description:
     "Duna Yazılım Danışmanlık Limited Şirketi — profesyonel yazılım danışmanlığı, özel yazılım geliştirme ve teknoloji çözümleri. Duna Software, Turkey.",
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     alternateLocale: "en_US",
     url: "https://dunayazilim.com.tr",
-    siteName: "Duna Yazılım & Danışmanlık",
-    title: "Duna Yazılım & Danışmanlık",
+    siteName: "Duna Yazılım",
+    title: "Duna Yazılım",
     description:
       "Profesyonel yazılım danışmanlığı ve özel yazılım geliştirme. Duna Yazılım Danışmanlık Limited Şirketi.",
     images: [

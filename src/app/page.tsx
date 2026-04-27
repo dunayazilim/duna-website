@@ -22,7 +22,7 @@ function getFirebaseApp() {
 const texts = {
   tr: {
     contact: "İletişim",
-    footer: "© 2026, Duna Yazılım & Danışmanlık",
+    footer: "© 2026, Duna Yazılım",
     about: "Yazılımı insan dokunuşuyla geliştiriyoruz; önce dinliyor, sonra ihtiyaçlarınıza gerçekten uyan çözümler üretiyoruz. Şablon yok, kestirme yol yok, sadece hedeflerinize göre şekillenen özenli çalışma.",
     trustedBy: "Partnerlerimiz",
     andMore: "ve daha fazlası...",
@@ -34,7 +34,7 @@ const texts = {
   },
   en: {
     contact: "Contact",
-    footer: "© 2026, Duna Yazılım & Danışmanlık",
+    footer: "© 2026, Duna Yazılım",
     about: "We build software with a human touch; listening first, then crafting solutions that truly fit your needs. No templates, no shortcuts, just thoughtful work shaped around your goals.",
     trustedBy: "Trusted By",
     andMore: "and many more...",

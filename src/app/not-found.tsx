@@ -6,14 +6,14 @@ import { useEffect, useState } from "react";
 const texts = {
   tr: {
     contact: "İletişim",
-    footer: "© 2026, Duna Yazılım & Danışmanlık",
+    footer: "© 2026, Duna Yazılım",
     notFound: "Bulunamadı",
     contactEmail: "E-posta gönder",
     contactMeeting: "Toplantı planla",
   },
   en: {
     contact: "Contact",
-    footer: "© 2026, Duna Yazılım & Danışmanlık",
+    footer: "© 2026, Duna Yazılım",
     notFound: "Not Found",
     contactEmail: "Send an email",
     contactMeeting: "Schedule a meeting",
