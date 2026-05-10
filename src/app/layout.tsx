@@ -4,12 +4,20 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://dunayazilim.com.tr"),
   title: {
-    default: "Duna Yazılım",
+    default: "Duna Yazılım — Mobile MVPs for B2B SaaS Startups",
     template: "%s | Duna Yazılım",
   },
   description:
-    "Duna Yazılım Danışmanlık Limited Şirketi — profesyonel yazılım danışmanlığı, özel yazılım geliştirme ve teknoloji çözümleri. Duna Software, Turkey.",
+    "Mobile MVPs for early-stage B2B SaaS startups. React Native + Node.js, Flutter, 8-12 week delivery. Solo full-stack, EU timezone.",
   keywords: [
+    "mobile MVP",
+    "B2B SaaS",
+    "React Native",
+    "Node.js",
+    "full-stack developer",
+    "mobile app development",
+    "Next.js",
+    "TypeScript",
     "duna yazılım",
     "duna yazılım danışmanlık",
     "duna yazılım danışmanlığı",
@@ -46,9 +54,9 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: "https://dunayazilim.com.tr",
     siteName: "Duna Yazılım",
-    title: "Duna Yazılım",
+    title: "Duna Yazılım — Mobile MVPs for B2B SaaS Startups",
     description:
-      "Profesyonel yazılım danışmanlığı ve özel yazılım geliştirme. Duna Yazılım Danışmanlık Limited Şirketi.",
+      "Mobile MVPs for early-stage B2B SaaS startups. React Native + Node.js, Flutter, 8-12 week delivery. Solo full-stack, EU timezone.",
     images: [
       {
         url: "/Logo.png",
@@ -59,8 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Duna Yazılım Danışmanlık",
-    description: "Profesyonel yazılım danışmanlığı ve özel yazılım geliştirme.",
+    title: "Duna Yazılım — Mobile MVPs for B2B SaaS Startups",
+    description:
+      "Mobile MVPs for early-stage B2B SaaS startups. React Native + Node.js, 8-12 week delivery. Solo full-stack, EU timezone.",
     images: ["/Logo.png"],
   },
 };

@@ -27,47 +27,61 @@ export default function NotFound() {
   const t = texts[lang];
 
   useEffect(() => {
-    document.body.classList.add("no-scroll");
+    if (contactOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
     return () => document.body.classList.remove("no-scroll");
-  }, []);
+  }, [contactOpen]);
 
   return (
     <>
-      <div className="lang-switcher">
-        <button
-          onClick={() => setLang("en")}
-          className={lang === "en" ? "lang-active" : ""}
-        >
-          EN
-        </button>
-        <span>/</span>
-        <button
-          onClick={() => setLang("tr")}
-          className={lang === "tr" ? "lang-active" : ""}
-        >
-          TR
-        </button>
-      </div>
-      <button
-        className="contact-button"
-        onClick={() => {
-          setContactOpen(true);
-          setShowCalendar(false);
-        }}
-      >
-        {t.contact}
-      </button>
-      <div className="main-content">
-        <a href="/" style={{ display: "contents" }}>
-          <img
-            src="/Logo.png"
-            alt="Duna Yazılım Danışmanlık Logo"
-            className="main-logo"
-          />
-        </a>
-        <p className="not-found-text">{t.notFound}</p>
-      </div>
+      <header className="site-header">
+        <nav className="site-nav" />
+        <div className="site-actions">
+          <button
+            className="contact-button"
+            onClick={() => {
+              setContactOpen(true);
+              setShowCalendar(false);
+            }}
+          >
+            {t.contact}
+          </button>
+          <div className="lang-switcher">
+            <button
+              onClick={() => setLang("en")}
+              className={lang === "en" ? "lang-active" : ""}
+            >
+              EN
+            </button>
+            <span>/</span>
+            <button
+              onClick={() => setLang("tr")}
+              className={lang === "tr" ? "lang-active" : ""}
+            >
+              TR
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section className="hero">
+          <a href="/" style={{ display: "contents" }}>
+            <img
+              src="/Logo.png"
+              alt="Duna Yazılım Danışmanlık Logo"
+              className="main-logo"
+            />
+          </a>
+          <p className="not-found-text">{t.notFound}</p>
+        </section>
+      </main>
+
       <footer>{t.footer}</footer>
+
       {contactOpen && (
         <div className="contact-overlay" onClick={() => setContactOpen(false)}>
           <div
