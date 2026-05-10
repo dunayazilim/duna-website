@@ -123,7 +123,7 @@ const texts = {
     },
     about: {
       label: "Hakkımda",
-      body: "Macaristan, Budapeşte merkezli solo full-stack geliştirici. Avrupa ve ABD genelindeki erken aşama B2B SaaS girişimleri için mobil MVP'lere odaklanıyorum. Türkiye'de kayıtlı limited şirket, AB-KDV uyumlu faturalandırma. Upwork'te Top Rated Plus (2024'ten beri), 10+ tamamlanmış proje. AB saat dilimi (CET).",
+      body: "Macaristan, Budapeşte merkezli solo full-stack geliştirici. Avrupa ve ABD genelindeki erken aşama B2B SaaS girişimleri için mobil MVP'lere odaklanıyorum.\n\nTürkiye'de kayıtlı şirket — AB-KDV uyumlu faturalandırma, AB ajanslarına göre %30-40 daha düşük ücretler, AB ajansı ek yükü olmadan. Upwork'te Top Rated Plus (2024'ten beri), 10+ tamamlanmış proje.\n\nAB saat dilimi (CET). Avrupa ve Orta Doğu genelinde yüz yüze görüşmeler için müsait.",
     },
     cta: {
       heading: "Başlamaya hazır mısınız?",
@@ -233,7 +233,7 @@ const texts = {
     },
     about: {
       label: "About",
-      body: "Solo full-stack developer based in Budapest, Hungary. Specializing in mobile MVPs for early-stage B2B SaaS startups across Europe and the US. Limited company registered in Turkey, EU-VAT compliant invoicing. Top Rated Plus on Upwork (since 2024) with 10+ projects delivered. EU timezone (CET).",
+      body: "Solo full-stack developer based in Budapest, Hungary. Specializing in mobile MVPs for early-stage B2B SaaS startups across Europe and the US.\n\nCompany registered in Turkey — EU-VAT compliant invoicing, 30-40% lower rates than EU agencies without the EU agency overhead. Top Rated Plus on Upwork (since 2024) with 10+ projects delivered.\n\nEU timezone (CET). Available for in-person meetings across Europe and the Middle East.",
     },
     cta: {
       heading: "Ready to ship?",
@@ -307,9 +307,9 @@ export default function Home() {
           <a href="#pricing">{t.nav.pricing}</a>
         </nav>
         <div className="site-actions">
-          <button className="contact-button" onClick={openContact}>{t.contact}</button>
+          <button className="nav-button" onClick={openContact}>{t.contact}</button>
           <button
-            className="contact-button"
+            className="nav-button"
             onClick={() => window.open("https://play.google.com/store/apps/dev?id=5556725446422818374", "_blank")}
           >
             Google Play
@@ -469,7 +469,9 @@ export default function Home() {
 
         <section className="section about-section">
           <p className="section-label">{t.about.label}</p>
-          <p className="about-text" style={{ marginTop: 0 }}>{t.about.body}</p>
+          {t.about.body.split("\n\n").map((paragraph, i) => (
+            <p key={i} className="about-text" style={i === 0 ? { marginTop: 0 } : undefined}>{paragraph}</p>
+          ))}
         </section>
 
         <section className="section cta-section">
