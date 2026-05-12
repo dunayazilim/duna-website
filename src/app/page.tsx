@@ -94,7 +94,7 @@ const texts = {
       tierS: {
         label: "Tier S — Lite MVP",
         features: ["4-6 hafta", "3-5 temel ekran", "Temel backend", "App Store yayını"],
-        price: "€4.000 – €10.000",
+        price: "€8.000 – €15.000",
       },
       tierM: {
         label: "Tier M — Full MVP",
@@ -107,7 +107,7 @@ const texts = {
           "Ödeme entegrasyonu",
           "30 gün lansman sonrası destek",
         ],
-        price: "€15.000 – €20.000",
+        price: "€20.000 – €40.000",
       },
       tierL: {
         label: "Tier L — Production-Ready",
@@ -118,7 +118,7 @@ const texts = {
           "90 gün destek",
           "Performans + güvenlik denetimi",
         ],
-        price: "€30.000 – €50.000",
+        price: "€45.000 – €80.000",
       },
     },
     about: {
@@ -204,7 +204,7 @@ const texts = {
       tierS: {
         label: "Tier S — Lite MVP",
         features: ["4-6 weeks", "3-5 core screens", "Basic backend", "App Store deployment"],
-        price: "€4,000 – €10,000",
+        price: "€8,000 – €15,000",
       },
       tierM: {
         label: "Tier M — Full MVP",
@@ -217,7 +217,7 @@ const texts = {
           "Payment integration",
           "30 days post-launch support",
         ],
-        price: "€15,000 – €20,000",
+        price: "€20,000 – €40,000",
       },
       tierL: {
         label: "Tier L — Production-Ready",
@@ -228,7 +228,7 @@ const texts = {
           "90 days support",
           "Performance + security audit",
         ],
-        price: "€30,000 – €50,000",
+        price: "€45,000 – €80,000",
       },
     },
     about: {
