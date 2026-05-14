@@ -123,7 +123,7 @@ const texts = {
     },
     about: {
       label: "Hakkımda",
-      body: "Macaristan, Budapeşte merkezli solo full-stack geliştirici. Avrupa ve ABD genelindeki erken aşama B2B SaaS girişimleri için mobil MVP'lere odaklanıyorum.\n\nTürkiye'de kayıtlı şirket — AB-KDV uyumlu faturalandırma, AB ajanslarına göre %30-40 daha düşük ücretler, AB ajansı ek yükü olmadan. Upwork'te Top Rated Plus (2024'ten beri), 10+ tamamlanmış proje.\n\nAB saat dilimi (CET). Avrupa ve Orta Doğu genelinde yüz yüze görüşmeler için müsait.",
+      body: "Macaristan, Budapeşte merkezli solo full-stack geliştirici. Avrupa ve ABD genelindeki erken aşama B2B SaaS girişimleri için mobil MVP'lere odaklanıyorum.\n\nTürkiye'de kayıtlı şirket — AB-KDV uyumlu faturalandırma, AB ajanslarına göre %30-40 daha düşük ücretler, AB ajansı ek yükü olmadan. Upwork'te Top Rated Plus (2024'ten beri), 10+ tamamlanmış proje.\n\nAB saat dilimi (CET). Avrupa, Orta Doğu, Kanada ve ABD genelinde yüz yüze görüşmeler için müsait.",
     },
     cta: {
       heading: "Başlamaya hazır mısınız?",
@@ -233,7 +233,7 @@ const texts = {
     },
     about: {
       label: "About",
-      body: "Solo full-stack developer based in Budapest, Hungary. Specializing in mobile MVPs for early-stage B2B SaaS startups across Europe and the US.\n\nCompany registered in Turkey — EU-VAT compliant invoicing, 30-40% lower rates than EU agencies without the EU agency overhead. Top Rated Plus on Upwork (since 2024) with 10+ projects delivered.\n\nEU timezone (CET). Available for in-person meetings across Europe and the Middle East.",
+      body: "Solo full-stack developer based in Budapest, Hungary. Specializing in mobile MVPs for early-stage B2B SaaS startups across Europe and the US.\n\nCompany registered in Turkey — EU-VAT compliant invoicing, 30-40% lower rates than EU agencies without the EU agency overhead. Top Rated Plus on Upwork (since 2024) with 10+ projects delivered.\n\nEU timezone (CET). Available for in-person meetings across Europe, Middle East, Canada and the United States.",
     },
     cta: {
       heading: "Ready to ship?",
