@@ -28,11 +28,10 @@ const texts = {
     cookieReject: "Reddet",
     contactEmail: "E-posta gönder",
     contactMeeting: "Toplantı planla",
-    hero: "Erken aşama B2B SaaS girişimleri için mobil MVP'ler. 8 haftada teslim. Solo full-stack geliştirme, AB saat dilimi, kayıtlı Türk şirketi.",
+    hero: "Erken aşama B2B SaaS girişimleri için mobil MVP'ler geliştiriyoruz — çoğu zaman 8 hafta içinde kullanıcılarınızın eline ulaşır. Full-stack yazılım stüdyosu, Avrupa saat dilimi.",
     nav: {
       services: "Hizmetler",
       process: "Süreç",
-      pricing: "Fiyatlar",
     },
     services: {
       label: "Hizmetler",
@@ -52,9 +51,9 @@ const texts = {
     caseStudies: {
       label: "Vaka Çalışmaları",
       mesh: {
-        project: "Mesh — Budapeşte merkezli builder topluluğu için frontend, mobil ve AI mühendisliği",
-        problem: "Problem: Mesh, ürünleri geliştikçe web frontend'leri, mobil uygulamalar ve AI tabanlı özellikler için esnek mühendislik kapasitesine ihtiyaç duyuyordu.",
-        solution: "Çözüm: React/Next.js frontend'leri, React Native mobil uygulamalar ve AI entegrasyonlarını kapsayan birden fazla proje teslim edildi. Stack: React, Next.js, React Native, OpenAI API'leri.",
+        project: "Mesh — Budapeşte merkezli builder topluluğu için frontend, mobil ve ürün mühendisliği",
+        problem: "Problem: Mesh, ürünleri geliştikçe web frontend'leri, mobil uygulamalar ve yeni ürün özellikleri için esnek mühendislik kapasitesine ihtiyaç duyuyordu.",
+        solution: "Çözüm: React/Next.js frontend'leri, React Native mobil uygulamalar ve birkaç OpenAI destekli özelliği kapsayan birden fazla proje teslim edildi. Stack: React, Next.js, React Native, OpenAI API'leri.",
         outcome: "Sonuç: Birden fazla ürün yüzeyinde devam eden mühendislik ortaklığı.",
       },
       student: {
@@ -89,41 +88,9 @@ const texts = {
         body: "Hata düzeltmeleri, performans optimizasyonları, gerçek kullanıcılardan gelen ilk özellik talepleri.",
       },
     },
-    pricing: {
-      label: "Fiyatlandırma",
-      tierS: {
-        label: "Tier S — Lite MVP",
-        features: ["4-6 hafta", "3-5 temel ekran", "Temel backend", "App Store yayını"],
-        price: "€8.000 – €15.000",
-      },
-      tierM: {
-        label: "Tier M — Full MVP",
-        popular: "En Popüler",
-        features: [
-          "8-12 hafta",
-          "8-12 ekran",
-          "Tam backend & yönetim paneli",
-          "Push bildirimleri",
-          "Ödeme entegrasyonu",
-          "30 gün lansman sonrası destek",
-        ],
-        price: "€20.000 – €40.000",
-      },
-      tierL: {
-        label: "Tier L — Production-Ready",
-        features: [
-          "14-16 hafta",
-          "Ölçeklenebilir mimari",
-          "Gelişmiş entegrasyonlar",
-          "90 gün destek",
-          "Performans + güvenlik denetimi",
-        ],
-        price: "€45.000 – €80.000",
-      },
-    },
     about: {
       label: "Hakkımda",
-      body: "Macaristan, Budapeşte merkezli solo full-stack geliştirici. Avrupa ve ABD genelindeki erken aşama B2B SaaS girişimleri için mobil MVP'lere odaklanıyorum.\n\nTürkiye'de kayıtlı şirket — AB-KDV uyumlu faturalandırma, AB ajanslarına göre %30-40 daha düşük ücretler, AB ajansı ek yükü olmadan. Upwork'te Top Rated Plus (2024'ten beri), 10+ tamamlanmış proje.\n\nAB saat dilimi (CET). Avrupa, Orta Doğu, Kanada ve ABD genelinde yüz yüze görüşmeler için müsait.",
+      body: "Duna Yazılım, erken aşama B2B SaaS şirketleri için mobil MVP'ler geliştiren Budapeşte ve İstanbul merkezli bir yazılım stüdyosudur. Bir ürünü ilk görüşmeden kullanıcılarınızın eline ulaşan gerçek bir uygulamaya taşıyoruz — tasarım, geliştirme ve lansman uçtan uca bizde.\n\nAvrupa ve ABD'deki girişimciler için 10'dan fazla ürün teslim ettik. Çalışma baştan sona uygulamalı ve deneyimli ilerliyor: doğrudan iletişim, her hafta görebileceğiniz ilerleme ve yalnızca demoda iyi görünmek için değil, gerçek kullanıcılarla öğrenmek üzere kurgulanmış bir ürün.\n\nOrta Avrupa saat diliminde (CET) çalışıyoruz ve Avrupa, Orta Doğu, Kanada ve ABD'de yüz yüze görüşmelere açığız.",
     },
     cta: {
       heading: "Başlamaya hazır mısınız?",
@@ -138,11 +105,10 @@ const texts = {
     cookieReject: "Reject",
     contactEmail: "Send an email",
     contactMeeting: "Schedule a meeting",
-    hero: "Mobile MVPs for early-stage B2B SaaS startups. Shipped in 8 weeks. Solo full-stack development, EU timezone, registered Turkish company.",
+    hero: "We build mobile MVPs for early-stage B2B SaaS startups — usually in your users' hands within 8 weeks. Full-stack software studio, European time zone.",
     nav: {
       services: "Services",
       process: "Process",
-      pricing: "Pricing",
     },
     services: {
       label: "Services",
@@ -162,9 +128,9 @@ const texts = {
     caseStudies: {
       label: "Case Studies",
       mesh: {
-        project: "Mesh — Frontend, mobile, and AI engineering for a Budapest builder community",
-        problem: "Problem: Mesh needed flexible engineering capacity across web frontends, mobile apps, and AI-powered features as their products evolved.",
-        solution: "Solution: Delivered multiple projects spanning React/Next.js frontends, React Native mobile apps, and AI integrations. Stack: React, Next.js, React Native, OpenAI APIs.",
+        project: "Mesh — Frontend, mobile, and product engineering for a Budapest builder community",
+        problem: "Problem: Mesh needed flexible engineering capacity across web frontends, mobile apps, and new product features as their products evolved.",
+        solution: "Solution: Delivered multiple projects spanning React/Next.js frontends, React Native mobile apps, and a few OpenAI-backed features. Stack: React, Next.js, React Native, OpenAI APIs.",
         outcome: "Outcome: Ongoing engineering partnership across multiple product surfaces.",
       },
       student: {
@@ -199,41 +165,9 @@ const texts = {
         body: "Bug fixes, performance optimizations, first feature requests from real users.",
       },
     },
-    pricing: {
-      label: "Pricing",
-      tierS: {
-        label: "Tier S — Lite MVP",
-        features: ["4-6 weeks", "3-5 core screens", "Basic backend", "App Store deployment"],
-        price: "€8,000 – €15,000",
-      },
-      tierM: {
-        label: "Tier M — Full MVP",
-        popular: "Most Popular",
-        features: [
-          "8-12 weeks",
-          "8-12 screens",
-          "Full backend & admin panel",
-          "Push notifications",
-          "Payment integration",
-          "30 days post-launch support",
-        ],
-        price: "€20,000 – €40,000",
-      },
-      tierL: {
-        label: "Tier L — Production-Ready",
-        features: [
-          "14-16 weeks",
-          "Scale-ready architecture",
-          "Advanced integrations",
-          "90 days support",
-          "Performance + security audit",
-        ],
-        price: "€45,000 – €80,000",
-      },
-    },
     about: {
       label: "About",
-      body: "Solo full-stack developer based in Budapest, Hungary. Specializing in mobile MVPs for early-stage B2B SaaS startups across Europe and the US.\n\nCompany registered in Turkey — EU-VAT compliant invoicing, 30-40% lower rates than EU agencies without the EU agency overhead. Top Rated Plus on Upwork (since 2024) with 10+ projects delivered.\n\nEU timezone (CET). Available for in-person meetings across Europe, Middle East, Canada and the United States.",
+      body: "Duna Yazılım is a software studio based in Budapest and Istanbul, building mobile MVPs for early-stage B2B SaaS companies. We take a product from the first call to something real in your users' hands — design, engineering, and launch handled end to end.\n\nWe've delivered 10+ products for founders across Europe and the US. The work stays hands-on and senior throughout: direct communication, progress you can see every week, and a product built to learn from real users, not just to demo well.\n\nWe work on Central European time (CET) and are available for in-person meetings across Europe, the Middle East, Canada, and the US.",
     },
     cta: {
       heading: "Ready to ship?",
@@ -304,16 +238,9 @@ export default function Home() {
         <nav className="site-nav">
           <a href="#services">{t.nav.services}</a>
           <a href="#process">{t.nav.process}</a>
-          <a href="#pricing">{t.nav.pricing}</a>
         </nav>
         <div className="site-actions">
           <button className="nav-button" onClick={openContact}>{t.contact}</button>
-          <button
-            className="nav-button"
-            onClick={() => window.open("https://play.google.com/store/apps/dev?id=5556725446422818374", "_blank")}
-          >
-            Google Play
-          </button>
           <div className="lang-switcher">
             <button
               onClick={() => setLang("en")}
@@ -429,40 +356,6 @@ export default function Home() {
             <div className="process-step">
               <p className="process-step-title">{t.process.step4.title}</p>
               <p>{t.process.step4.body}</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="pricing" className="section">
-          <p className="section-label">{t.pricing.label}</p>
-          <div className="pricing-tiers">
-            <div className="pricing-tier">
-              <p className="pricing-tier-label">{t.pricing.tierS.label}</p>
-              <ul className="pricing-tier-features">
-                {t.pricing.tierS.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-              <p className="pricing-tier-price">{t.pricing.tierS.price}</p>
-            </div>
-            <div className="pricing-tier">
-              <span className="pricing-tier-popular">{t.pricing.tierM.popular}</span>
-              <p className="pricing-tier-label">{t.pricing.tierM.label}</p>
-              <ul className="pricing-tier-features">
-                {t.pricing.tierM.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-              <p className="pricing-tier-price">{t.pricing.tierM.price}</p>
-            </div>
-            <div className="pricing-tier">
-              <p className="pricing-tier-label">{t.pricing.tierL.label}</p>
-              <ul className="pricing-tier-features">
-                {t.pricing.tierL.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-              <p className="pricing-tier-price">{t.pricing.tierL.price}</p>
             </div>
           </div>
         </section>
