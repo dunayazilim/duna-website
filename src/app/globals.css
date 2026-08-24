@@ -216,6 +216,72 @@ main {
   margin-bottom: 12px;
 }
 
+.section-intro {
+  max-width: 560px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: #242225;
+  opacity: 0.7;
+  margin: -16px 0 32px;
+}
+
+.apps-list {
+  display: flex;
+  gap: 64px;
+  max-width: 1080px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.app-card {
+  flex: 0 1 340px;
+  min-width: 0;
+  border-left: 1.5px solid #242225;
+  padding: 4px 0 4px 24px;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: #242225;
+}
+
+.app-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.app-name {
+  font-size: 13px;
+  text-decoration: underline;
+  margin-bottom: 4px;
+}
+
+.app-tagline {
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.app-meta {
+  opacity: 0.6;
+  margin-top: 8px;
+}
+
+.app-link {
+  font-size: 13px;
+  color: #242225;
+  letter-spacing: 0.02em;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 8px;
+}
+
 .case-studies {
   display: flex;
   gap: 64px;
@@ -479,12 +545,14 @@ footer {
     max-width: 100%;
   }
 
-  .case-studies {
+  .case-studies,
+  .apps-list {
     flex-direction: column;
     gap: 32px;
   }
 
-  .case-study {
+  .case-study,
+  .app-card {
     flex: 0 0 auto;
     max-width: 100%;
   }
@@ -512,6 +580,7 @@ footer {
   }
 
   .case-study,
+  .app-card,
   .process-step {
     padding-left: 16px;
   }

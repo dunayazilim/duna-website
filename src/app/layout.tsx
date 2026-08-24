@@ -4,12 +4,19 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://dunayazilim.com.tr"),
   title: {
-    default: "Duna Yazılım — Mobile MVPs for B2B SaaS Startups",
+    default: "Duna Yazılım",
     template: "%s | Duna Yazılım",
   },
   description:
-    "Mobile MVPs for early-stage B2B SaaS startups. React Native + Node.js, Flutter, 8-12 week delivery. Solo full-stack, EU timezone.",
+    "App studio in Budapest and Istanbul. We build and publish our own mobile apps, and mobile MVPs for early-stage B2B SaaS startups. React Native, Node.js, Next.js.",
   keywords: [
+    "app studio",
+    "mobile app studio",
+    "uygulama stüdyosu",
+    "mobil uygulama stüdyosu",
+    "mobil uygulama geliştirme",
+    "iOS app development",
+    "ViewMET",
     "mobile MVP",
     "B2B SaaS",
     "React Native",
@@ -54,9 +61,9 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: "https://dunayazilim.com.tr",
     siteName: "Duna Yazılım",
-    title: "Duna Yazılım — Mobile MVPs for B2B SaaS Startups",
+    title: "Duna Yazılım",
     description:
-      "Mobile MVPs for early-stage B2B SaaS startups. React Native + Node.js, Flutter, 8-12 week delivery. Solo full-stack, EU timezone.",
+      "App studio in Budapest and Istanbul. We build and publish our own mobile apps, and mobile MVPs for early-stage B2B SaaS startups.",
     images: [
       {
         url: "/Logo.png",
@@ -67,9 +74,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Duna Yazılım — Mobile MVPs for B2B SaaS Startups",
+    title: "Duna Yazılım",
     description:
-      "Mobile MVPs for early-stage B2B SaaS startups. React Native + Node.js, 8-12 week delivery. Solo full-stack, EU timezone.",
+      "App studio in Budapest and Istanbul. We build and publish our own mobile apps, and mobile MVPs for early-stage B2B SaaS startups.",
     images: ["/Logo.png"],
   },
 };
@@ -79,6 +86,8 @@ const jsonLd = {
   "@type": "Organization",
   name: "Duna Yazılım Danışmanlık Limited Şirketi",
   alternateName: ["Duna Yazılım", "Duna Software", "Duna Yazılım Danışmanlık"],
+  description:
+    "App studio building and publishing its own mobile apps, and product engineering for early-stage B2B SaaS companies.",
   url: "https://dunayazilim.com.tr",
   logo: "https://dunayazilim.com.tr/Logo.png",
   contactPoint: {
@@ -87,7 +96,31 @@ const jsonLd = {
     contactType: "customer service",
     availableLanguage: ["Turkish", "English"],
   },
-  sameAs: [],
+  sameAs: ["https://apps.apple.com/us/developer/emir-surmen/id1640995227"],
+};
+
+/* Apps published under the Duna Yazılım name. Add an entry per release. */
+const appsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Apps by Duna Yazılım",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "MobileApplication",
+        name: "ViewMET: Metropolitan Museum",
+        applicationCategory: "EducationApplication",
+        operatingSystem: "iOS",
+        url: "https://apps.apple.com/us/app/viewmet-metropolitan-museum/id6761077023",
+        publisher: {
+          "@type": "Organization",
+          name: "Duna Yazılım Danışmanlık Limited Şirketi",
+        },
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -102,6 +135,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(appsJsonLd) }}
         />
       </body>
     </html>

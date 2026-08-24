@@ -19,6 +19,43 @@ function getFirebaseApp() {
   return getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 }
 
+type AppItem = {
+  name: string;
+  tagline: string;
+  body: string;
+  platform: string;
+  href: string;
+  linkLabel: string;
+  icon: string;
+};
+
+/* Add an app: drop one entry into each language array below.
+   `icon` is optional — set it to a path in /public (e.g. "/viewmet-icon.png"). */
+const apps: Record<"tr" | "en", AppItem[]> = {
+  tr: [
+    {
+      name: "ViewMET",
+      tagline: "Metropolitan Museum koleksiyonu cebinizde",
+      body: "Metropolitan Sanat Müzesi'nin tüm kataloğunu keşfetmek için bir iOS uygulaması: yüksek çözünürlüklü 400.000'den fazla eser, küratör notları, departmana göre gezinme, sanatçı, dönem, teknik ve kültüre göre arama, kendi kaydettiğiniz koleksiyonlar.",
+      platform: "iOS",
+      href: "https://apps.apple.com/us/app/viewmet-metropolitan-museum/id6761077023",
+      linkLabel: "App Store",
+      icon: "",
+    },
+  ],
+  en: [
+    {
+      name: "ViewMET",
+      tagline: "The Met's collection, in your pocket",
+      body: "An iOS app for exploring the Metropolitan Museum of Art's full catalog — 400,000+ works in high resolution, with curator notes, browsing by department, search by artist, period, medium, or culture, and collections you save yourself.",
+      platform: "iOS",
+      href: "https://apps.apple.com/us/app/viewmet-metropolitan-museum/id6761077023",
+      linkLabel: "App Store",
+      icon: "",
+    },
+  ],
+};
+
 const texts = {
   tr: {
     contact: "İletişim",
@@ -28,13 +65,15 @@ const texts = {
     cookieReject: "Reddet",
     contactEmail: "E-posta gönder",
     contactMeeting: "Toplantı planla",
-    hero: "Erken aşama B2B SaaS girişimleri için mobil MVP'ler geliştiriyoruz — çoğu zaman 8 hafta içinde kullanıcılarınızın eline ulaşır. Full-stack yazılım stüdyosu, Avrupa saat dilimi.",
+    hero: "Biz bir uygulama stüdyosuyuz. Kendi uygulamalarımızı tasarlayıp yayınlıyoruz — aynı ekip ve aynı standartla erken aşama ekipler için de ürün geliştiriyoruz. Çoğu zaman 8 hafta içinde kullanıcılarınızın eline ulaşır. Full-stack, Avrupa saat dilimi.",
     nav: {
       services: "Hizmetler",
+      apps: "Uygulamalar",
       process: "Süreç",
     },
     services: {
       label: "Hizmetler",
+      intro: "Müşteri projeleri için uçtan uca ürün geliştirme.",
       mobile: {
         title: "Mobil MVP Geliştirme",
         body: "React Native iOS + Android. 8-12 haftada teslim, tasarımdan lansmana tam süreç.",
@@ -47,6 +86,10 @@ const texts = {
         title: "Full-Stack Web Uygulamaları",
         body: "Next.js + Postgres web uygulamaları, yönetim panelleri, dashboard'lar.",
       },
+    },
+    apps: {
+      label: "Uygulamalarımız",
+      intro: "Kendi adımıza tasarlayıp geliştirdiğimiz ve mağazalarda yayınladığımız uygulamalar. Müşteri projelerine giren ekip ve standart da aynı.",
     },
     caseStudies: {
       label: "Vaka Çalışmaları",
@@ -89,8 +132,8 @@ const texts = {
       },
     },
     about: {
-      label: "Hakkımda",
-      body: "Duna Yazılım, erken aşama B2B SaaS şirketleri için mobil MVP'ler geliştiren Budapeşte ve İstanbul merkezli bir yazılım stüdyosudur. Bir ürünü ilk görüşmeden kullanıcılarınızın eline ulaşan gerçek bir uygulamaya taşıyoruz — tasarım, geliştirme ve lansman uçtan uca bizde.\n\nAvrupa ve ABD'deki girişimciler için 10'dan fazla ürün teslim ettik. Çalışma baştan sona uygulamalı ve deneyimli ilerliyor: doğrudan iletişim, her hafta görebileceğiniz ilerleme ve yalnızca demoda iyi görünmek için değil, gerçek kullanıcılarla öğrenmek üzere kurgulanmış bir ürün.\n\nOrta Avrupa saat diliminde (CET) çalışıyoruz ve Avrupa, Orta Doğu, Kanada ve ABD'de yüz yüze görüşmelere açığız.",
+      label: "Hakkımızda",
+      body: "Duna Yazılım, Budapeşte ve İstanbul merkezli bir uygulama stüdyosudur. Bir yandan kendi uygulamalarımızı geliştirip kendi adımızla yayınlıyoruz, bir yandan da erken aşama B2B SaaS şirketleri için ürün geliştiriyoruz — tasarım, geliştirme ve lansman uçtan uca bizde.\n\nKendi uygulamalarımızı yayınlamak, müşterilerimizden istediğimiz kararların aynısını bizim de vermemiz demek: önce ne çıkacak, ana ekranda yer etmeyi ne hak ediyor, ilk haftadan sonra gerçekten ne kullanılıyor. Avrupa ve ABD'deki girişimciler için 10'dan fazla ürün teslim ettik; çalışma baştan sona uygulamalı ve deneyimli ilerliyor — doğrudan iletişim, her hafta görebileceğiniz ilerleme ve yalnızca demoda iyi görünmek için değil, gerçek kullanıcılarla öğrenmek üzere kurgulanmış bir ürün.\n\nOrta Avrupa saat diliminde (CET) çalışıyoruz ve Avrupa, Orta Doğu, Kanada ve ABD'de yüz yüze görüşmelere açığız.",
     },
     cta: {
       heading: "Başlamaya hazır mısınız?",
@@ -105,13 +148,15 @@ const texts = {
     cookieReject: "Reject",
     contactEmail: "Send an email",
     contactMeeting: "Schedule a meeting",
-    hero: "We build mobile MVPs for early-stage B2B SaaS startups — usually in your users' hands within 8 weeks. Full-stack software studio, European time zone.",
+    hero: "We're an app studio. We design, build, and publish our own apps — and we bring the same team and the same standards to products for early-stage teams, usually in your users' hands within 8 weeks. Full-stack, European time zone.",
     nav: {
       services: "Services",
+      apps: "Apps",
       process: "Process",
     },
     services: {
       label: "Services",
+      intro: "End-to-end product work for client teams.",
       mobile: {
         title: "Mobile MVP Development",
         body: "React Native iOS + Android. 8-12 week delivery, full design-to-launch.",
@@ -124,6 +169,10 @@ const texts = {
         title: "Full-Stack Web Apps",
         body: "Next.js + Postgres web applications, admin panels, dashboards.",
       },
+    },
+    apps: {
+      label: "Our Apps",
+      intro: "Products we design, build, and ship to the stores under our own name. Client work gets the same team and the same standards.",
     },
     caseStudies: {
       label: "Case Studies",
@@ -167,7 +216,7 @@ const texts = {
     },
     about: {
       label: "About",
-      body: "Duna Yazılım is a software studio based in Budapest and Istanbul, building mobile MVPs for early-stage B2B SaaS companies. We take a product from the first call to something real in your users' hands — design, engineering, and launch handled end to end.\n\nWe've delivered 10+ products for founders across Europe and the US. The work stays hands-on and senior throughout: direct communication, progress you can see every week, and a product built to learn from real users, not just to demo well.\n\nWe work on Central European time (CET) and are available for in-person meetings across Europe, the Middle East, Canada, and the US.",
+      body: "Duna Yazılım is an app studio based in Budapest and Istanbul. We build our own apps and publish them under our own name, and we build products for early-stage B2B SaaS companies — design, engineering, and launch handled end to end.\n\nRunning our own apps means we live with the same decisions we ask clients to make: what ships first, what earns a place on the home screen, what actually gets used after week one. We've delivered 10+ products for founders across Europe and the US, and the work stays hands-on and senior throughout — direct communication, progress you can see every week, and a product built to learn from real users, not just to demo well.\n\nWe work on Central European time (CET) and are available for in-person meetings across Europe, the Middle East, Canada, and the US.",
     },
     cta: {
       heading: "Ready to ship?",
@@ -237,6 +286,7 @@ export default function Home() {
       <header className="site-header">
         <nav className="site-nav">
           <a href="#services">{t.nav.services}</a>
+          <a href="#apps">{t.nav.apps}</a>
           <a href="#process">{t.nav.process}</a>
         </nav>
         <div className="site-actions">
@@ -274,6 +324,7 @@ export default function Home() {
 
         <section id="services" className="section">
           <p className="section-label">{t.services.label}</p>
+          <p className="section-intro">{t.services.intro}</p>
           <div className="services-list">
             <div className="service">
               <p className="service-title">{t.services.mobile.title}</p>
@@ -287,6 +338,32 @@ export default function Home() {
               <p className="service-title">{t.services.fullstack.title}</p>
               <p>{t.services.fullstack.body}</p>
             </div>
+          </div>
+        </section>
+
+        <section id="apps" className="section">
+          <p className="section-label">{t.apps.label}</p>
+          <p className="section-intro">{t.apps.intro}</p>
+          <div className="apps-list">
+            {apps[lang].map((app) => (
+              <article className="app-card" key={app.name}>
+                {app.icon ? (
+                  <img src={app.icon} alt={app.name} className="app-icon" />
+                ) : null}
+                <p className="app-name">{app.name}</p>
+                <p className="app-tagline">{app.tagline}</p>
+                <p>{app.body}</p>
+                <p className="app-meta">{app.platform}</p>
+                <a
+                  href={app.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="app-link"
+                >
+                  {app.linkLabel} ↗
+                </a>
+              </article>
+            ))}
           </div>
         </section>
 
