@@ -112,6 +112,12 @@ const texts = {
         solution: "Çözüm: Her aşamada AI entegrasyonlu, eksiksiz pipeline otomasyon platformu inşa edildi. Çoklu kanal yönetimi için tek dashboard, ekip üyeleri için rol tabanlı erişim. Stack: Next.js, Postgres, OpenAI entegrasyonu, video işleme pipeline.",
         outcome: "Sonuç: Bir haftalık koordinasyon işini günde iki kez izlenen bir pipeline'a indiriyor.",
       },
+      neurolens: {
+        project: "NeuroLens — Acil radyoloji için yapay zekâ destekli beyin kanaması tespiti",
+        problem: "Problem: Akut bakımda beyin BT'sinin dakikalar içinde okunması gerekir. Acil hekimleri ve radyologlar, şüpheli kanamaların tarama geldiği anda öne çıkarılmasına ihtiyaç duyuyordu — iş akışına yeni bir adım eklemeden, ikinci bir çift göz olarak.",
+        solution: "Çözüm: Ürün uçtan uca geliştirildi: BT görüntülerinin sisteme alınması, şüpheli kanamaları işaretleyen tespit pipeline'ı ve sonuçların incelenip önceliklendirildiği klinisyen arayüzü.",
+        outcome: "Sonuç: Yayında; acil ve radyoloji ekipleri tarafından kullanılıyor.",
+      },
     },
     process: {
       label: "Süreç",
@@ -194,6 +200,12 @@ const texts = {
         problem: "Problem: Managing multiple YouTube channels required coordinating freelancers across 7 content stages — research, scripts, voice, visuals, assembly, thumbnails, upload.",
         solution: "Solution: Built a complete pipeline automation platform with AI integration at every stage. Single dashboard for managing multiple channels, role-based access for team members. Stack: Next.js, Postgres, OpenAI integration, video processing pipeline.",
         outcome: "Outcome: Reduces a week of coordination work to a pipeline monitored twice a day.",
+      },
+      neurolens: {
+        project: "NeuroLens — AI-powered brain hemorrhage detection for emergency radiology",
+        problem: "Problem: In acute care a brain CT has to be read in minutes. Emergency physicians and radiologists needed suspected hemorrhages surfaced the moment a scan arrives — a second set of eyes, not another step in the workflow.",
+        solution: "Solution: Built the product end to end — CT ingestion, the detection pipeline that flags suspected hemorrhages, and the clinician-facing web application for reviewing and triaging results.",
+        outcome: "Outcome: Shipped and in use by emergency and radiology teams.",
       },
     },
     process: {
@@ -413,6 +425,20 @@ export default function Home() {
               <p>{t.caseStudies.autoflow.problem}</p>
               <p>{t.caseStudies.autoflow.solution}</p>
               <p>{t.caseStudies.autoflow.outcome}</p>
+            </article>
+            <article className="case-study">
+              <img src="/neurolens_logo.png" alt="NeuroLens" className="case-study-logo" />
+              <a
+                href="https://neurolens.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="case-study-link"
+              >
+                {t.caseStudies.neurolens.project} ↗
+              </a>
+              <p>{t.caseStudies.neurolens.problem}</p>
+              <p>{t.caseStudies.neurolens.solution}</p>
+              <p>{t.caseStudies.neurolens.outcome}</p>
             </article>
           </div>
         </section>

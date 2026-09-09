@@ -303,15 +303,17 @@ main {
 
 .case-studies {
   display: flex;
+  flex-wrap: wrap;
   gap: 64px;
-  max-width: 1080px;
+  /* two 340px columns + one gap: keeps four cards as a balanced 2x2 */
+  max-width: 744px;
   width: 100%;
   justify-content: center;
   align-items: stretch;
 }
 
 .case-study {
-  flex: 1 1 0;
+  flex: 1 1 300px;
   min-width: 0;
   max-width: 340px;
   border-left: 1.5px solid #242225;
