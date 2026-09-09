@@ -117,6 +117,25 @@ body.no-scroll {
   text-decoration: underline;
 }
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  color: #242225;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.social-link:hover {
+  opacity: 1;
+}
+
+.social-link svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  display: block;
+}
+
 main {
   display: block;
 }

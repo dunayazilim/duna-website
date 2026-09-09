@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import LinkedInLink from "./LinkedInLink";
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { getApps, initializeApp } from "firebase/app";
 import { useEffect, useState } from "react";
@@ -291,6 +292,7 @@ export default function Home() {
         </nav>
         <div className="site-actions">
           <button className="nav-button" onClick={openContact}>{t.contact}</button>
+          <LinkedInLink />
           <div className="lang-switcher">
             <button
               onClick={() => setLang("en")}

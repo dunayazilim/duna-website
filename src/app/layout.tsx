@@ -96,7 +96,10 @@ const jsonLd = {
     contactType: "customer service",
     availableLanguage: ["Turkish", "English"],
   },
-  sameAs: ["https://apps.apple.com/us/developer/emir-surmen/id1640995227"],
+  sameAs: [
+    "https://www.linkedin.com/company/duna-yazilim",
+    "https://apps.apple.com/us/developer/emir-surmen/id1640995227",
+  ],
 };
 
 /* Apps published under the Duna Yazılım name. Add an entry per release. */

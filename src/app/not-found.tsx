@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import LinkedInLink from "./LinkedInLink";
 import { useEffect, useState } from "react";
 
 const texts = {
@@ -49,6 +50,7 @@ export default function NotFound() {
           >
             {t.contact}
           </button>
+          <LinkedInLink />
           <div className="lang-switcher">
             <button
               onClick={() => setLang("en")}
