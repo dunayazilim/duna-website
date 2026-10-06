@@ -43,6 +43,15 @@ const apps: Record<"tr" | "en", AppItem[]> = {
       linkLabel: "App Store",
       icon: "",
     },
+    {
+      name: "Scribble",
+      tagline: "Fotoğraflara çizin, arkadaşlarınızın ana ekranına gönderin",
+      body: "Fotoğrafların üzerine çizip arkadaşlarınıza göndermek için bir iOS uygulaması: bir fotoğraf çekin ya da galeriden seçin, kalem, keçeli kalem ve şekillerle üzerine çizin, tek dokunuşla gönderin. Çiziminiz, uygulamayı açmaya gerek kalmadan arkadaşlarınızın ana ekranındaki widget'ta belirir. Günlük serilerle alışkanlığa dönüşür; size yalnızca arkadaşlarınız çizim gönderebilir.",
+      platform: "iOS",
+      href: "https://heyscribble.com",
+      linkLabel: "heyscribble.com",
+      icon: "",
+    },
   ],
   en: [
     {
@@ -52,6 +61,15 @@ const apps: Record<"tr" | "en", AppItem[]> = {
       platform: "iOS",
       href: "https://apps.apple.com/us/app/viewmet-metropolitan-museum/id6761077023",
       linkLabel: "App Store",
+      icon: "",
+    },
+    {
+      name: "Scribble",
+      tagline: "Doodle on photos, straight to your friends' Home Screens",
+      body: "An iOS app for drawing on photos and sending them to friends — snap or pick a photo, scribble on it with pens, markers, and shapes, and send it in a tap. It shows up right on their Home Screen widget, no need to open the app. Daily streaks keep it going, and only friends can send you scribbles.",
+      platform: "iOS",
+      href: "https://heyscribble.com",
+      linkLabel: "heyscribble.com",
       icon: "",
     },
   ],
