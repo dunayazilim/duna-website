@@ -41,7 +41,7 @@ const apps: Record<"tr" | "en", AppItem[]> = {
       platform: "iOS",
       href: "https://apps.apple.com/us/app/viewmet-metropolitan-museum/id6761077023",
       linkLabel: "App Store",
-      icon: "",
+      icon: "/viewmet_icon.png",
     },
     {
       name: "Scribble",
@@ -50,7 +50,16 @@ const apps: Record<"tr" | "en", AppItem[]> = {
       platform: "iOS",
       href: "https://heyscribble.com",
       linkLabel: "heyscribble.com",
-      icon: "",
+      icon: "/scribble_icon.png",
+    },
+    {
+      name: "Hound",
+      tagline: "Köpeğinize özel günlük davranış planı",
+      body: "Köpeğiniz hakkındaki birkaç soruyu gün gün ilerleyen bir davranış planına dönüştüren bir iOS uygulaması: ayrılık kaygısı, havlama, eşyalara zarar verme, tasmayı çekme, tepkisellik ve fazla kilo için. Yerleşik duyarsızlaştırma ve karşı koşullandırma protokollerine dayanır; günde yaklaşık on dakikalık tek bir egzersiz, ilerlemeniz de adım adım takip edilir.",
+      platform: "iOS",
+      href: "https://houndapp.xyz",
+      linkLabel: "houndapp.xyz",
+      icon: "/hound_icon.png",
     },
   ],
   en: [
@@ -61,7 +70,7 @@ const apps: Record<"tr" | "en", AppItem[]> = {
       platform: "iOS",
       href: "https://apps.apple.com/us/app/viewmet-metropolitan-museum/id6761077023",
       linkLabel: "App Store",
-      icon: "",
+      icon: "/viewmet_icon.png",
     },
     {
       name: "Scribble",
@@ -70,7 +79,16 @@ const apps: Record<"tr" | "en", AppItem[]> = {
       platform: "iOS",
       href: "https://heyscribble.com",
       linkLabel: "heyscribble.com",
-      icon: "",
+      icon: "/scribble_icon.png",
+    },
+    {
+      name: "Hound",
+      tagline: "A daily behavior plan built for your dog",
+      body: "An iOS app that turns a few questions about your dog into a day-by-day behavior plan — for separation anxiety, barking, destruction, pulling on the lead, reactivity, and extra weight. Built on established desensitization and counter-conditioning protocols, with one short exercise a day and your progress tracked as you go.",
+      platform: "iOS",
+      href: "https://houndapp.xyz",
+      linkLabel: "houndapp.xyz",
+      icon: "/hound_icon.png",
     },
   ],
 };

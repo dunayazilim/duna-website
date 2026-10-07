@@ -249,7 +249,8 @@ main {
 .apps-list {
   display: flex;
   gap: 64px;
-  max-width: 1080px;
+  /* three 340px columns + two gaps: keeps three apps on one row */
+  max-width: 1148px;
   width: 100%;
   justify-content: center;
   align-items: stretch;
